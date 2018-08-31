@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t fmod31/react-test -f ./client/Dockerfile.env ./client
+  - docker build -t fmod31/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run fmod31/react-test npm test -- --coverage
