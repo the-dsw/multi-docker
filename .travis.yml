@@ -6,7 +6,7 @@ before_install:
   - docker build -t fmod31/react-test -f ./client/Dockerfile.env ./client
 
 script:
-  - docker run fmod31/react-test npm run test -- --coverage
+  - docker run fmod31/react-test npm test -- --coverage
 
 after_success:
   - docker build -t fmod31/multi-client ./client
